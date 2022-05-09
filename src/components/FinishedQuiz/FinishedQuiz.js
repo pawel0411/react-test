@@ -8,9 +8,11 @@ const FinishedQuiz = props=>{
         if(props.results[key]==='success'){
             total++
         }
-        return total;
+        return total
     }, 0)
     return(
+        <>
+        <h1>Результаты теста</h1>
         <div className={classes.FinishedQuiz}>
        <ul>
 {props.quiz.map((quizItem, index)=>{
@@ -23,7 +25,7 @@ classes[props.results[quizItem.id]]
         <li key={index}>
 <strong>{index+1}</strong>.&nbsp;
 {quizItem.question}
-<i className={cls.join(' ')}></i>
+<i className={cls.join(' ')}/>
         </li>
     )
 })}
@@ -38,6 +40,7 @@ classes[props.results[quizItem.id]]
            <Button  type="success"> перейти в список тестов</Button>
        </div>
         </div>
+        </>
     )
 }
 

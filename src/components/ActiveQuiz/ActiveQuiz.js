@@ -4,6 +4,8 @@ import Answerslist from "./AnswersList/AnswersList";
 
 const ActiveQuiz = props =>{
     return(
+        <>
+        <h1>Ответьте правильно на вопрос:</h1>
     <div className={classes.ActiveQuiz}>
         <p className={classes.Question}>
             <span>
@@ -19,6 +21,7 @@ const ActiveQuiz = props =>{
 
         />
     </div>
+    </>
 )
     }
 export default ActiveQuiz;
